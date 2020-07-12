@@ -6,15 +6,17 @@
 # 
 # <https://github.com/KFERMercer/OpenWrt-CI>
 # 
-#tat
+
 name: OpenWrt-CI
 
 on:
-  schedule:
-    - cron: 0 20 * * *
   push:
-    tags:
-      - '*'
+    branches: 
+      - master
+  schedule:
+   - cron: 0 20 * * *
+ # release:
+ #  types: [published]
 
 jobs:
 
